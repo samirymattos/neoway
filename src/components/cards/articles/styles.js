@@ -6,13 +6,14 @@ export const ContainerCard = styled(Grid)({
   maxWidth: "300px",
   borderRadius: "10px",
   overflow: "hidden",
-  boxShadow: "-1px 7px 14px 5px rgba(87,53,219,0.69)",
-  margin: "10px",
+  boxShadow: "-1px 7px 14px 5px rgba(87,53,219,0.2)",
   fontFamily: "Roboto",
 });
 
 export const Image = styled("img")({
-  maxWidth: "100%"
+  width: "100%",
+  height: "150px",
+  objectFit: "cover"
 });
 
 export const WrapperContent = styled(Box)({
@@ -23,6 +24,10 @@ export const NewsTitle = styled(Typography)({
   fontWeight: 900,
   fontSize: "16px",
   textAlign: "center",
+  lineHeight: "18px",
+  textOverflow: 'ellipsis',
+  overflow: 'hidden',
+  height: "calc(18px * 3)"
 });
 
 export const Author = styled(Typography)({

@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Box, Grid, Typography } from "@mui/material";
-import api from "../service/api";
-import { NewsCard } from "../components/cards/articles";
+import api from "../../service/api";
+import { NewsCard } from "../../components/cards/articles";
+import * as style from "./styles";
 
-export const HomePage = () => {
+export const InitialPage = () => {
   const [articles, setArticles] = useState([])
 
   useEffect(() => {
@@ -16,8 +17,8 @@ export const HomePage = () => {
   return (
     <Grid container flexDirection="column">
       <Typography>Noticias</Typography>
-      <Grid container>
-        <Box>{articles?.map((article, index) => <NewsCard key={index} article={article} />)}</Box>
+      <Grid container spacing={4} justifyContent="center">
+        {articles?.map((article, index) => <NewsCard key={index} article={article} />)}
       </Grid>
     </Grid>
   );

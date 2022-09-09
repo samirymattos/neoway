@@ -2,7 +2,7 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import { PrivateRoute, AuthRoute } from "./PrivateRoute";
 
-import { HomePage } from "./pages";
+import { InitialPage } from "./pages";
 
 function AppRoutes() {
   return (
@@ -13,7 +13,7 @@ function AppRoutes() {
       </Route>
 
       <Route element={<AuthRoute />}>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<InitialPage />} />
       </Route>
     </Routes>
   );
