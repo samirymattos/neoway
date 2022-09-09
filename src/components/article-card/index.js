@@ -3,7 +3,7 @@ import * as style from "./styles";
 import Parser from 'html-react-parser';
 import { Grid } from "@mui/material";
 
-export const NewsCard = ({article}) => {
+export const ArticleCard = ({article}) => {
   return(
     <Grid item>
       <style.ContainerCard>

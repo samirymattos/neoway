@@ -1,6 +1,6 @@
 import { Box, Grid, Typography } from "@mui/material";
 import { styled } from "@mui/system";
-import palette from "../../../theme/palette";
+import palette from "../../theme/palette";
 
 export const ContainerCard = styled(Grid)({
   maxWidth: "300px",
@@ -38,7 +38,7 @@ export const Author = styled(Typography)({
   color: palette.placeholder
 });
 
-export const Description = styled(Typography)({
+export const Description = styled(Box)({
   fontWeight: 500,
   fontSize: "14px",
   lineHeight: "16px",
