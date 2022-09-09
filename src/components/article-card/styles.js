@@ -1,4 +1,4 @@
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Button, Link, Typography } from "@mui/material";
 import { styled } from "@mui/system";
 import palette from "../../theme/palette";
 
@@ -90,6 +90,14 @@ export const ContentModal = styled(Box)({
   fontSize: "16px",
   lineHeight: "18px",
   textAlign: "left",
+});
+
+export const UrlArticle = styled(Link)({
+  fontWeight: 300,
+  fontSize: "16px",
+  lineHeight: "18px",
+  textAlign: "left",
+  color: palette.title,
 });
 
 export const ArticleModal = styled(Box)({

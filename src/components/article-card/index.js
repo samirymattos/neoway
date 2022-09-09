@@ -39,6 +39,11 @@ export const ArticleCard = ({article}) => {
           <style.ContentModal>
             {Parser(article.content)}
           </style.ContentModal>
+          <Grid container justifyContent="flex-end">
+            <style.UrlArticle href={article.url}>
+              página do artigo
+            </style.UrlArticle>
+          </Grid>
         </style.WrapperContent>
       </style.ArticleModal>
     </Modal>
