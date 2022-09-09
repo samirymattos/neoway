@@ -4,6 +4,7 @@ import api from "../../service/api";
 import { ArticleCard } from "../../components/article-card";
 import * as style from "./styles";
 import { LoadingGlobal } from "../../components/loading";
+import { ToggleButtonCustom } from "../../components/toggle-button";
 
 export const InitialPage = () => {
   const [articles, setArticles] = useState([]);
@@ -27,11 +28,7 @@ export const InitialPage = () => {
       {isLoading && <LoadingGlobal />}
       <style.Title>Notícias</style.Title>
       <Grid container mb={3} justifyContent="center">
-        <ToggleButtonGroup value={sort} onChange={handleSort} color="primary" exclusive>
-          <ToggleButton value="popularity">Popularidade</ToggleButton>
-          <ToggleButton value="relevancy">Relevância</ToggleButton>
-          <ToggleButton value="publishedAt">Recentes</ToggleButton>
-        </ToggleButtonGroup>
+        <ToggleButtonCustom value={sort} onChange={handleSort}/>
       </Grid>
       <Grid container spacing={4} justifyContent="center">
         {articles?.map((article, index) => <ArticleCard key={index} article={article} />)}
