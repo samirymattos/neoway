@@ -50,7 +50,7 @@ export const ArticleCard = ({article}) => {
   )
 
   return(
-    <Grid item>
+    <Grid item id={article.source.id}>
       {open && Article}
       <style.ContainerCard onClick={() => setOpen(true)}>
         <style.Image src={article.urlToImage} />
